@@ -1,0 +1,49 @@
+<!doctype html>
+    <html>
+    <head>
+        <title>WEB1 - Welcome</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1><a href="index.html">WEB</a></h1>
+        <input id="night_day" type="button" value="night" onclick="
+        if(document.querySelector('#night_day').value === 'night'){
+            document.querySelector('#night_day').value='day';
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color='white';
+        }else{
+            document.querySelector('#night_day').value='night'
+            document.querySelector('body').style.backgroundColor='white';
+            document.querySelector('body').style.color='black';
+            }
+        ">
+        <br><br>
+        <ol>
+            <li><a href="1.html">HTML</a></li>
+            <li><a href="2.html">CSS</a></li>
+            <li><a href="3.html">JavaScript</a></li>
+        </ol>
+        <h2>WEB</h2>
+        <p>The World Wide Web (abbreviated WWW or the Web) is an information space where documents and other web resources are identified by Uniform Resource Locators (URLs), interlinked by hypertext links, and can be accessed via the Internet.[1] English scientist Tim Berners-Lee invented the World Wide Web in 1989. He wrote the first web browser computer program in 1990 while employed at CERN in Switzerland.[2][3] The Web browser was released outside of CERN in 1991, first to other research institutions starting in January 1991 and to the general public on the Internet in August 1991.
+        </p>
+        <input id="night_day2" type="button" value="night" onclick="
+         var target=document.querySelector('body');
+        if(this.value === 'night'){
+            var target = document.querySelector('body');
+            this.value='day';
+            target.style.backgroundColor = 'black';
+            target.style.color='white';
+        }else{
+            this.value='night'
+            target.style.backgroundColor='white';
+            target.style.color='black';
+            }
+        ">
+    </body>
+</html>
+
+<!--
+    버튼을 복사하게 되면 id가 겹치는 문제가 발생한다. 따라서 this라는 자신을 가르키는 키워드를 통해 이것을 해결할 수 있다.
+    중복되는 document.querySelector('body'); 를 target이라는 변수에 넣어서 중복을 줄인다.
+    최대한 중복을 제거하려는 노력을 해야된다.
+-->
