@@ -1,0 +1,65 @@
+<!doctype html>
+    <html>
+    <head>
+        <title>WEB1 - Welcome</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1><a href="index.html">WEB</a></h1>
+        <oi>
+            <li><a href="1.html">HTML</a></li>
+            <li><a href="2.html">CSS</a></li>
+            <li><a href="3.html">JavaScript</a></li>
+        </oi>
+        <h2>WEB</h2>
+        <p>The World Wide Web (abbreviated WWW or the Web) is an information space where documents and other web resources are identified by Uniform Resource Locators (URLs), interlinked by hypertext links, and can be accessed via the Internet.[1] English scientist Tim Berners-Lee invented the World Wide Web in 1989. He wrote the first web browser computer program in 1990 while employed at CERN in Switzerland.[2][3] The Web browser was released outside of CERN in 1991, first to other research institutions starting in January 1991 and to the general public on the Internet in August 1991.
+	    </p>
+    </body>
+</html>
+
+<!--
+    internet vs web
+    (도로)       (자동차)
+    플랫폼         APP
+                ftp, web, e-mail
+
+    팀 버너스리 = 인터넷이 들어옴으로서 웹페이지 편집기를 만들게되고 WWW 만듬
+
+    2대의 컴퓨터가 서로 정보를 교환 => 1컴퓨터 웹브라우저 <-인터넷-> 2컴퓨터 웹서버(주소, 저장매체,)
+    서버안에 저장된 정보 및 파일을 인터넷을 통해 전기적 신호로 바꾸어서 웹브라우저는 이를 해석해서 볼 정보를 볼 수 있다. 
+
+    블라우저 -요청-> <-응답- 웹서버
+    Client              Server
+
+    인터넷에 접속되어 있는 컴퓨터 하나하나를 호스트라고 한다.
+    인터넷에 접속되어 있는 컴퓨터를 제공하는 것을 호스팅이라 한다. 웹을 해주면 웹호스팅
+    github의 제공은 static 호스팅이다.
+
+    github의 webhosting을 통해 우리의 웹페이지를 호스팅해보도록 하자!
+
+    ===========기초적인 웹 서버 운영하기================
+    이과정을 통해서 인터넷이 동작하는 여러원리에 대해 이해할 수 있도록 도와준다!
+    apache를 사용해서 해보겠다. 
+
+    우리과정에서는 비트나미를 통해하지만 진행자는 직접 아파치와 mriaDBㄹ를 설치하여 진행하겠다.
+    우선 mac에는 아파치가 기본 설치되있다. 따라서 mariaDB만 설치 및 설정해준다.
+    >>-Homebrew- 설치 공식 사이트에서 설명한 대로 설치하면된다.
+    >>brew install mariaDB
+    >> mysql.server start
+    >> Error 발생 => mkdir /usr/local/etc/my.cnf.d 을 통해 오류 처릭 가능
+    ->mysql -u root
+    ->update user set password=password('리신콤보1234') where user='root';
+    ->flush pribvileges;
+    로 기본 설정을 마무리한다.
+
+    apache 시작
+    >>sudo apachectl start
+    >>sudo apachectl stop
+    -> 기본 인덱스 폴더 : /Library/WebServer/Documents/
+    이것을 변경해 주어야 한다. 나는 특정 워크스페이스로 변경하여 index.html을 넣어 놓을 생각이다.
+    >>sudo vi /etc/apache2/httpd.conf
+    =>DocumentRoot "/Library/WebServer/Documents"
+    <Directory "/Library/WebServer/Documents"
+    => 나는 www파일을 기본 디렉토리로 설정하였다.
+
+-->
