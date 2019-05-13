@@ -32,6 +32,7 @@ npm install pm2 -g
 
 =>pm2는 node.js프로세스가 꺼지면 다시켜주거나 js파일이 변경되면 자동으로 재실행 시켜주는 일을 해주는 프로세스 매니저이다.
 
-
+node.js에 대한 전판적인 것을 볼 수 있어서 좋았다. javascript르 통한 변수, 함수, 객체 등, 
+node.js의 api 그리고 npm을 통한 외부 module사용을 통한 간단한 보안까지 할 수 있었다.
 
 
